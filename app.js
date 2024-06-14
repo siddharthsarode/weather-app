@@ -6,11 +6,11 @@ const hbs = require("hbs");
 
 
 //set path
-app.use(express.static(path.join(__dirname, "../public")));
+app.use(express.static(path.join(__dirname, "/public")));
 
 app.set("view engine", "hbs");
-app.set("views", path.join(__dirname, "../views"));
-hbs.registerPartials(path.join(__dirname, "../views/partials"));
+app.set("views", path.join(__dirname, "/views"));
+hbs.registerPartials(path.join(__dirname, "/views/partials"));
 
 // Routing
 app.get("/", (req, res) => {
